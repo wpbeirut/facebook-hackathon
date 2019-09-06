@@ -37,3 +37,13 @@ body {
     height: 100%;
 }
 
+.react-calendar {
+    background: transparent !important;
+    width: 100% !important;
+}
+
+.md-card {
+    box-shadow: 0.1px 0.1px 0.1px rgb(128, 124, 124);
+    background: white !important;
+    border-radius: 0.4rem;
+}

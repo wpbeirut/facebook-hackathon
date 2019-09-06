@@ -8,8 +8,15 @@ class Settings extends Component {
     }
     render() {
         return (
-            <div>
-                <button className='btn btn-danger btn-block m-3' onClick={this.logout}>logout</button>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-10' style={{height:'80vh'}}>
+
+                    </div>
+            <div className='col-10 mx-auto text-center'>
+                <button className='btn btn-danger btn-block' onClick={this.logout}>logout</button>
+            </div>
+                </div>
             </div>
         );
     }

@@ -18,18 +18,22 @@ const MyRoute = MyRouteProps => {
   if (isLoggedIn || publicRoute) {
     return (
       <div>
-        <Page props={{...MyRouteProps}}>
-          <Route
-            render={originalRouteProps => <Component  {...originalRouteProps} />}
-          />
-        </Page>
+          <Page props={{ ...MyRouteProps }}>
+            <Route
+              render={originalRouteProps => (
+                <Component {...originalRouteProps} />
+              )}
+            />
+          </Page>
         {isLoggedIn ? <Navigator /> : ""}
       </div>
     );
   } else {
     return (
       <Route
-        render={originalRouteProps => <SignIn  props={{...MyRouteProps}} {...originalRouteProps} />}
+        render={originalRouteProps => (
+          <SignIn props={{ ...MyRouteProps }} {...originalRouteProps} />
+        )}
       />
     );
   }
@@ -39,11 +43,21 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <MyRoute exact path="/" component={Home} title='Home'/>
-        <MyRoute exact path="/Calendar" component={Calendar} title='Calendar'/>
-        <MyRoute exact path="/my_medicines" component={MyMedicines} title='My medicines'/>
-        <MyRoute exact path="/my_mentors" component={MyMentors} title='My mentors' />
-        <MyRoute exact path="/settings" component={Settings} title='Settings'/>
+        <MyRoute exact path="/" component={Home} title="Home" />
+        <MyRoute exact path="/Calendar" component={Calendar} title="Calendar" />
+        <MyRoute
+          exact
+          path="/my_medicines"
+          component={MyMedicines}
+          title="My medicines"
+        />
+        <MyRoute
+          exact
+          path="/my_mentors"
+          component={MyMentors}
+          title="My mentors"
+        />
+        <MyRoute exact path="/settings" component={Settings} title="Settings" />
         <MyRoute exact path="/signin" component={SignIn} publicRoute />
         <MyRoute exact path="/signup" component={SignUp} publicRoute />
       </Switch>

@@ -1005,3 +1005,15 @@ body {
   .col-form-label {
     padding-left: 2px;
   }
+
+  .days-selection:hover {
+    color: white;
+    transition: all 1s ease-in-out;
+  }
+
+  .mentor-thumbnail {
+    border-radius: 50%;
+    width: 80px !important;
+    height: 80px !important;
+
+  }

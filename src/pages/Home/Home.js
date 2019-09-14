@@ -134,10 +134,36 @@ class Home extends Component {
                 </div>
                 <hr />
                 <div class="form-group row mb-0 d-flex text-center">
-                  <div className="col-11 text-center mx-auto d-flex">
-                   {days.map(day=><a>{day}</a>)}
+                  <div className="col-11 text-center mb-1 mx-auto">
+                   {days.map(day=><a className='m-1 days-selection'>{day}</a>)}
                   </div>
                 </div>
+
+                <div class="form-group row mb-0 d-flex">
+                <label for="inputEmail3" class="col-3 col-form-label">
+                    From
+                  </label>
+                  <div className="col-8 text-center">
+                  <input
+                      type='date'
+                      class="form-control"
+                      name="from_date"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row mb-2 d-flex">
+                <label for="inputEmail3" class="col-3 col-form-label">
+                    To
+                  </label>
+                  <div className="col-8 text-center">
+                  <input
+                      type='date'
+                      class="form-control"
+                      name="to_date"
+                    />
+                  </div>
+                </div>
+                <hr />
                 <div class="form-group row mb-0 d-flex text-center">
                   <div className="col-11 text-center mx-auto d-flex">
                     <button

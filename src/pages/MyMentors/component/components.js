@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 
-class Medicine extends Component {
+class Mentor extends Component {
   
   
   render() {
     return (
       <div className='row single-medicine' onClick={this.props.onClick}>
               <div className='col-4 img-medicine-container'>
-                  <img className="img-fluid" src='https://pics.drugstore.com/prodimg/599258/900.jpg' />
+                  <img className="img-fluid mentor-thumbnail" src='/images/me.jpg' />
               </div>
               <div className='col-8 '>
                  <p className='mt-3'>
-                 this is a panadol paragraph i dont know what to writee here lol
+                 Hussein Hussein
                      </p> 
               </div>
           </div>
@@ -19,4 +19,4 @@ class Medicine extends Component {
   }
 }
 
-export default Medicine;
+export default Mentor;

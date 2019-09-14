@@ -417,11 +417,11 @@ body {
   
   .btn {
     color: #eee;
-    width: 100%;
+    /* width: 100%; */
     border: none;
     font-size: 16px;
-    padding: 12px 24px;
-    background: #cf0e3f;
+    /* padding: 12px 24px; */
+    /* background: #cf0e3f; */
     border-radius: 30px
   }
   .search .title{
@@ -1000,4 +1000,8 @@ body {
     margin-top: 10px;
     line-height: 22px;
     text-align: center
+  }
+
+  .col-form-label {
+    padding-left: 2px;
   }

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 class PillParams extends Component {
+
+  state = {options:[]}
+
   render() {
     return (
       <div class="form-group row mb-0 d-flex">
@@ -10,8 +13,8 @@ class PillParams extends Component {
         <div class="col-3">
           <select
             class="form-control"
-            name="select_importance"
-            onChange={e=>this.props.onChange({[e.target.name]:e.target.value})}
+            name="take_quantity"
+            onChange={e=>this.props.handleOptionChange(e)}
             placeholder="Full name"
           >
             {[1, 2, 3].map(med => (
@@ -25,9 +28,9 @@ class PillParams extends Component {
         <div class="col-4">
           <select
             class="form-control"
-            name="select_importance"
+            name="take_time"
             placeholder="Full name"
-            onChange={e=>this.props.onChange({[e.target.name]:e.target.value})}
+            onChange={e=>this.props.handleOptionChange(e)}
           >
             {["1:00", "2:00", "3:00"].map(med => (
               <option key={med}>{med}</option>

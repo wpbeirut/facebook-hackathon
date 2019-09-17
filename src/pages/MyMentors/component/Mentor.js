@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 
+
 class Mentor extends Component {
   
   
+
+
+
   render() {
     return (
       <div className='row single-medicine' onClick={this.props.onClick}>

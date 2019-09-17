@@ -10,8 +10,8 @@ class SignUp extends Component {
           </div>
         </div>
             <form>
-            <div class="form-group row mb-0">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">
+            <div class="form-group row mb-2">
+                <label for="inputEmail3" class="col-sm-2 ">
                   Full name
                 </label>
                 <div class="col-sm-10">
@@ -23,8 +23,8 @@ class SignUp extends Component {
                   />
                 </div>
               </div>
-              <div class="form-group row mb-0">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">
+              <div class="form-group row mb-2">
+                <label for="inputEmail3" class="col-sm-2 ">
                   Email
                 </label>
                 <div class="col-sm-10">
@@ -36,8 +36,8 @@ class SignUp extends Component {
                   />
                 </div>
               </div>
-              <div class="form-group row mb-0">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">
+              <div class="form-group row mb-2">
+                <label for="inputPassword3" class="col-sm-2 ">
                   Password
                 </label>
                 <div class="col-sm-10">
@@ -50,7 +50,7 @@ class SignUp extends Component {
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">
+                <label for="inputPassword3" class="col-sm-2 ">
                  confirm Password
                 </label>
                 <div class="col-sm-10">

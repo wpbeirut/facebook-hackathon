@@ -39,6 +39,10 @@ const MyRoute = MyRouteProps => {
   }
 };
 
+const alarm = () =>{
+  alert('its the time')
+}
+
 const Routes = () => {
   return (
     <BrowserRouter>

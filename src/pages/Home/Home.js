@@ -7,7 +7,7 @@ class Home extends Component {
   state = {
     open: false,
     data:{},
-    times: [],
+    options: [],
     medicines: [
       { id: 1, name: "Panadol" },
       { id: 2, name: "Tramal" },
@@ -31,14 +31,14 @@ class Home extends Component {
   addField = () => {
     const item = {};
     this.setState({
-      times: [...this.state.times, item]
+      options: [...this.state.options, item]
     });
   };
   removeField = idx => {
-    let times = [...this.state.times];
-    times.splice(idx, 1);
+    let options = [...this.state.options];
+    options.splice(idx, 1);
     this.setState({
-      times
+      options
     });
   };
 
@@ -48,23 +48,22 @@ class Home extends Component {
     this.setState({data})
   }
 
-  handleChange = idx => e => {
-    console.log(idx)
-    const { name, value } = e.target;
-    console.log(idx,name, value)
-    const data = {...this.state.data}
-    const times = [...this.state.times];
-    data[idx] = {
-      ...data[idx],
-      [name]: value
-    };
-    data.details = times
-    this.setState({data})
 
-  };
+  handleOptionChange = (e,idx) => {
+
+    const {name,value} = e.target
+    const options= [...this.state.options];
+
+    options[idx] = {
+      ...options[idx],
+      [name]: value
+    };   
+    this.setState({options})
+    console.log(options)
+  }
 
   modal = () => {
-    const { medicines, importants, times, open,days } = this.state;
+    const { medicines, importants, options, open,days } = this.state;
     if (open) {
       return (
         <Modal centered show={true} onHide={"handleClose"}>
@@ -84,7 +83,6 @@ class Home extends Component {
                       name="select_medicine"
                       placeholder="Full name"
                       onChange={this.handleInputChange}
-
                     >
                       {medicines.map(imp => (
                         <option key={imp.id}>{imp.name}</option>
@@ -110,10 +108,10 @@ class Home extends Component {
                   </div>
                 </div>
 
-                {times.map((time, idx) => {
+                {options.map((time, idx) => {
                   return (
                     <PillParams
-                      onChange={(obj)=>this.handleChange(obj)}
+                      handleOptionChange={e=>this.handleOptionChange(e,idx)}
                       removeField={()=>this.removeField(idx)}
                     />
                   );
